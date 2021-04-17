@@ -1,3 +1,3 @@
-const test = 2;
+const test = 3;
 console.log(test);
 export default test;
