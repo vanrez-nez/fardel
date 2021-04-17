@@ -8,7 +8,7 @@
     "build": "tsc --build",
     "start:pointer-events": "yarn workspace @fardel/pointer-events start"
   },
-  "private": true,
+  "private": false,
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
@@ -22,5 +22,6 @@
     "webpack-cli": "4.6.0",
     "webpack-dev-server": "^3.11.2"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "version": "0.0.1"
 }
