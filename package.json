@@ -1,12 +1,12 @@
 {
-  "name": "ux-belt-monorepo",
+  "name": "fardel-monorepo",
   "workspaces": [
     "packages/*"
   ],
   "scripts": {
     "clean": "rimraf ./packages/*/dist",
     "build": "tsc --build",
-    "start:pointer-events": "yarn workspace @ux-belt/pointer-events start"
+    "start:pointer-events": "yarn workspace @fardel/pointer-events start"
   },
   "private": true,
   "devDependencies": {

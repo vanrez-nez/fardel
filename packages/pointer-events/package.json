@@ -1,5 +1,5 @@
 {
-  "name": "@ux-belt/pointer-events",
+  "name": "@fardel/pointer-events",
   "version": "0.0.1",
   "description": "Minimal library to handle pointer events in the browser",
   "main": "dist/index.js",
@@ -14,6 +14,7 @@
     "src",
     "!dist/tsconfig.tsbuildinfo"
   ],
+  "repository": "git@github.com:vanrez-nez/fardel.git",
   "author": "Ivan Juarez",
   "private": true,
   "publishConfig": {

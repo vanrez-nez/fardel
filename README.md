@@ -1,2 +1,2 @@
-# ux-belt
-A set of small libraries
+# Fardel
+A satchel with common tools for my daily use.
