@@ -21,5 +21,6 @@
   "publishConfig": {
     "access": "public"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "gitHead": "de1eca88dfc097fded1b51749449c4b2d033069d"
 }
