@@ -1,6 +1,6 @@
 {
   "name": "@fardel/pointer-events",
-  "version": "0.0.42",
+  "version": "0.0.43",
   "description": "Minimal library to handle pointer events in the browser",
   "main": "dist/index.js",
   "scripts": {
@@ -16,10 +16,6 @@
     "!dist/tsconfig.tsbuildinfo"
   ],
   "author": "Ivan Juarez",
-  "publishConfig": {
-    "access": "public",
-    "registry": "https://npm.pkg.github.com/"
-  },
   "license": "MIT",
-  "gitHead": "862eb25675d888ec02047830220874b15e5db328"
+  "gitHead": "0e04b629b0248fc2852c12094582cfcbfb3fd328"
 }
