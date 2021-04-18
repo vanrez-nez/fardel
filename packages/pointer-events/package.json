@@ -1,6 +1,6 @@
 {
   "name": "@fardel/pointer-events",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "description": "Minimal library to handle pointer events in the browser",
   "main": "dist/index.js",
   "scripts": {
@@ -20,5 +20,5 @@
   ],
   "author": "Ivan Juarez",
   "license": "MIT",
-  "gitHead": "cf75b774b0375483f9436976f294bbebff373ecf"
+  "gitHead": "e398dabe8b112d71d6b5344dd54602ef0314ba0f"
 }
