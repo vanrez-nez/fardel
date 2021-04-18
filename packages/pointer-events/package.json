@@ -18,7 +18,8 @@
   "repository": "git@github.com:vanrez-nez/fardel.git",
   "author": "Ivan Juarez",
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://npm.pkg.github.com/"
   },
   "license": "MIT",
   "gitHead": "b1fc51a9a8bf481100b13a37832a24984339e135"
