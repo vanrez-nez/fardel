@@ -1,0 +1,23 @@
+{
+  "name": "@fardel/utils",
+  "version": "0.0.46",
+  "description": "Bundle of common utils",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "yarn bundle:prod",
+    "bundle:prod": "webpack --mode production",
+    "bundle:dev": "webpack --mode development --devtool source-map",
+    "start": "webpack serve --mode development --open",
+    "prepack": "yarn build"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "src",
+    "!dist/tsconfig.tsbuildinfo"
+  ],
+  "author": "Ivan Juarez",
+  "license": "MIT"
+}
