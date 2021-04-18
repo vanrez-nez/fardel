@@ -2,6 +2,7 @@
   "files": [],
   "references": [
     { "path": "./packages/pointer-events/src" },
-    { "path": "./packages/utils/src" }
+    { "path": "./packages/utils/src" },
+    { "path": "./packages/utils/test" }
   ]
 }

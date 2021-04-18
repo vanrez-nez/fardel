@@ -8,6 +8,7 @@
     "bundle:prod": "webpack --mode production",
     "bundle:dev": "webpack --mode development --devtool source-map",
     "start": "webpack serve --mode development --open",
+    "test": "yarn bundle:dev && mocha \"dist/test/**/*.spec.js\"",
     "prepack": "yarn build"
   },
   "publishConfig": {
@@ -16,6 +17,7 @@
   "files": [
     "dist",
     "src",
+    "!dist/test",
     "!dist/tsconfig.tsbuildinfo"
   ],
   "author": "Ivan Juarez",

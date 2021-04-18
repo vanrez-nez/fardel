@@ -7,14 +7,19 @@
     "clean": "rimraf ./packages/*/dist",
     "build": "tsc --build",
     "start:pointer-events": "yarn workspace @fardel/pointer-events start",
-    "start:utils": "yarn workspace @fardel/utils start"
+    "start:utils": "yarn workspace @fardel/utils start",
+    "test:utils": "yarn workspace @fardel/utils test"
   },
-  "private": false,
+  "private": true,
   "devDependencies": {
+    "@types/chai": "^4.2.16",
+    "@types/mocha": "^8.2.2",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
+    "chai": "^4.3.4",
     "eslint": "^7.24.0",
     "lerna": "^4.0.0",
+    "mocha": "^8.3.2",
     "rimraf": "^3.0.2",
     "source-map-loader": "^2.0.1",
     "ts-loader": "^8.1.0",
