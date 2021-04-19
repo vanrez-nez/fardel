@@ -1,5 +1,11 @@
 import { isString, isObject } from '../assert';
 
+/**
+ * Gets the value at @path of @object If the resolved value is undefined, the @defaultValue is returned in its place.
+ * @param object The target to query
+ * @param path The path of the property to get
+ * @param defaultValue the value returned when prop doesn't exists
+ */
 export function get<T, R>(object: T, path: string, defaultValue?: R): R | undefined {
   if (!isObject(object)) return defaultValue;
   const parts = isString(path) ? path.split('.') : [];
