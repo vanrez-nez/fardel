@@ -16,7 +16,8 @@ import {
   isSet,
   isSymbol,
   isUndefined,
-  isWeakMap
+  isWeakMap,
+  isPrimitive
 } from '@fardel/utils';
 
 const args = (function(p1, p2, p3) {
@@ -44,6 +45,8 @@ const testTypes = [
   { val: new Map(), type: 'map' },
   { val: new WeakMap(), type: 'weakmap' },
   { val: new Set(), type: 'set' },
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
+  { val: BigInt(1), type: 'bigint' }
 ]
 
 describe('Utils/object', () => {
@@ -183,6 +186,14 @@ describe('Utils/object', () => {
       const msg = `isSet on type(${test.type})`;
       const validTypes = ['set'];
       expect(isSet(test.val)).to.equal(validTypes.includes(test.type), msg);
+    });
+  });
+
+  test('isPrimitive', () => {
+    testTypes.forEach((test) => {
+      const msg = `isPrimitive on type(${test.type})`;
+      const validTypes = ['number', 'string', 'undefined', 'boolean', 'null', 'symbol', 'bigint'];
+      expect(isPrimitive(test.val)).to.equal(validTypes.includes(test.type), msg);
     });
   });
 });

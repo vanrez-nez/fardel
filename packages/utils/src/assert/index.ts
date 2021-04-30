@@ -1,5 +1,7 @@
+export * from './get-type';
 export * from './is-arguments';
 export * from './is-array';
+export * from './is-array-eq';
 export * from './is-boolean';
 export * from './is-date';
 export * from './is-error';
@@ -14,3 +16,4 @@ export * from './is-string';
 export * from './is-symbol';
 export * from './is-undefined';
 export * from './is-weakmap';
+export * from './is-primitive';

@@ -3,6 +3,6 @@
  * @param value Target value to test
  */
 export function isObject(value: unknown): boolean {
-  const type = typeof value;
-  return !!value && (type == 'object' || type == 'function');
+  const t = typeof value;
+  return !!value && (t == 'object' || t == 'function');
 }

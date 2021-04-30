@@ -1,9 +1,9 @@
-import { isObjectType } from './shared'
+import { getType } from './get-type'
 
 /**
  * Tests if any given value is of type Set
  * @param value Target value to test
  */
 export function isSet(value: unknown): boolean {
-  return isObjectType(value, '[object Set]');
+  return getType(value) === 'set';
 }
