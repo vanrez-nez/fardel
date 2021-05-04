@@ -19,5 +19,5 @@ export function get<T, R>(object: T, path: string, defaultValue?: R): R | undefi
       return defaultValue;
     }
   }
-  return (curr as unknown) as R;
+  return curr as R;
 }
