@@ -2,7 +2,7 @@ import { test } from 'mocha';
 import { expect } from 'chai';
 import { memoize, MemoizeCacheKey } from '@fardel/utils';
 
-describe('Utils/cache', () => {
+describe('Utils/function', () => {
   test('memoize', () => {
     function fn(a: number, b: number, c = 0) {
       return Math.max(a, b, c);
