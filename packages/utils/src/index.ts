@@ -1,5 +1,6 @@
 export * from './assert'
-export * from './cache'
+export * from './function'
 export * from './math'
 export * from './object'
 export * from './string'
+export * from './datetime'
