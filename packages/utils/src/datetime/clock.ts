@@ -1,5 +1,9 @@
 
-const now = () => performance.now();
+const offset = Date.now();
+const now = () => {
+  return globalThis.performance ? globalThis.performance.now() : Date.now() - offset;
+}
+
 export class Clock {
   private autoStart = false;
   private running = false;
@@ -51,7 +55,7 @@ export class Clock {
     let diff = 0;
     if (this.running) {
       const newTime = now();
-      diff = (newTime - this.oldTime) / 1000;
+      diff = (newTime - this.oldTime);
       this.oldTime = newTime;
       this.elapsedTime += diff;
     }
