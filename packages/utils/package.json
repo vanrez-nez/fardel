@@ -1,6 +1,6 @@
 {
   "name": "@fardel/utils",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Bundle of common utils",
   "main": "dist/index.js",
   "scripts": {
