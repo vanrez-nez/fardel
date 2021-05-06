@@ -1,8 +1,19 @@
+import sinon from 'sinon';
 import { test } from 'mocha';
 import { expect } from 'chai';
-import { memoize, MemoizeCacheKey } from '@fardel/utils';
+import { debounce, memoize, MemoizeCacheKey } from '@fardel/utils';
 
 describe('Utils/function', () => {
+  let SysClock: sinon.SinonFakeTimers;
+
+  before(() => {
+    SysClock = sinon.useFakeTimers();
+  });
+
+  after(() => {
+    SysClock.restore();
+  });
+
   test('memoize', () => {
     function fn(a: number, b: number, c = 0) {
       return Math.max(a, b, c);
@@ -78,4 +89,15 @@ describe('Utils/function', () => {
     });
     expect(mFuncC({ a: 1, b: 2, c: 3 })).equal(mFuncC({ a: 1, b: 2, c: 3 }), 'Equal object params via JSON.stringify');
   });
+
+  test('debounce', () => {
+    // TODO: basic tests
+    expect(0).eq(0);
+  });
+
+  test('throttle', () => {
+    // TODO: basic tests
+    expect(0).eq(0);
+  });
+
 });
