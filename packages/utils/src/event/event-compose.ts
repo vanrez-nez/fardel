@@ -14,17 +14,17 @@ export interface EventComposeEntry {
 export function eventCompose(target: EventTarget, events: EventComposeEntry[]): EventComposeHandler {
   const ActiveHandlers: EventListenerHandler[] = [];
   const handlers = Object.freeze({
-    unbindAll() {
+    unbindAll: () => {
       ActiveHandlers.forEach(e => e.unbind())
     },
-    bindAll() {
+    bindAll: () => {
       if (ActiveHandlers.length === 0) {
         events.forEach(e => {
           ActiveHandlers.push(eventListener(target, e.type, e.listener, e.options))
         })
       }
     }
-  })
+  });
   handlers.bindAll();
   return handlers;
 }
