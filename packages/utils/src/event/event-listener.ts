@@ -10,10 +10,10 @@ export function eventListener(
   listener: EventListenerOrEventListenerObject,
   options?: EventListenerOptions | boolean
 ): EventListenerHandler {
-  const handlers = {
-    unbind() { target.addEventListener(type, listener, options) },
-    bind() { target.removeEventListener(type, listener, options) }
-  };
+  const handlers = Object.freeze({
+    unbind: () => { target.addEventListener(type, listener, options) },
+    bind: () => { target.removeEventListener(type, listener, options) }
+  });
   handlers.bind();
   return handlers;
 }
