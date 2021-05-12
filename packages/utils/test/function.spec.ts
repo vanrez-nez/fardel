@@ -1,7 +1,7 @@
 import sinon from 'sinon';
 import { test } from 'mocha';
 import { expect } from 'chai';
-import { debounce, memoize, MemoizeCacheKey } from '@fardel/utils';
+import { memoize, MemoizeCacheKey } from '@fardel/utils';
 
 describe('Utils/function', () => {
   let SysClock: sinon.SinonFakeTimers;
