@@ -61,5 +61,23 @@ describe('Utils/event', () => {
       expect(call.callCount).equal(1, 'Once w/ multiple subscription');
     }
 
+    {
+      // Should not call after global off
+      const e = new EventEmitter();
+      const c1 = sinon.fake();
+      const c2 = sinon.fake();
+      const c3 = sinon.fake();
+      e.once('a', c1);
+      e.on('b', c2);
+      e.on('c', c3);
+      e.off();
+      e.emit('a');
+      e.emit('b');
+      e.emit('c');
+      expect(c1.callCount).equal(0, 'Should not call after global off');
+      expect(c2.callCount).equal(0, 'Should not call after global off');
+      expect(c3.callCount).equal(0, 'Should not call after global off');
+    }
+
   });
 });
