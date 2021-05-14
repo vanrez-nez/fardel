@@ -5,16 +5,16 @@ import { isUndefined, isFunction } from '../assert';
 type Func = (...args: any[]) => void;
 
 type GenericEvents = {
-  [key: string]: any;
+  [key: string]: Func;
 }
 
-type TypedEvents<T> = {
+type DefaultEvents<T> = {
   [Property in keyof T]: Func;
 }
 
 type ListenerMap<T> = Map<keyof T, Set<Func>>;
 
-export class EventEmitter<Events extends TypedEvents<Events> = GenericEvents> {
+export class EventEmitter<Events extends DefaultEvents<Events> = GenericEvents> {
   private alwaysMap: ListenerMap<Events> | undefined;
   private onceMap: ListenerMap<Events> | undefined;
 
@@ -53,7 +53,12 @@ export class EventEmitter<Events extends TypedEvents<Events> = GenericEvents> {
     this.getOnceSet(name).add(handler);
   }
 
-  off<K extends keyof Events>(name: K, handler?: Events[K]): void{
+  off<K extends keyof Events>(name?: K, handler?: Events[K]): void {
+    if ( name === undefined) {
+      this.alwaysMap?.forEach(s => s.clear());
+      this.onceMap?.forEach(s => s.clear());
+      return;
+    }
     if (isUndefined(this.alwaysMap) || !this.alwaysMap.has(name)) return;
     const alwaysSet = this.getAlwaysSet(name);
     if (!isFunction(handler)) {
