@@ -1,3 +1,1 @@
-const test = 4;
-console.log(test);
-export default test;
+export * from './pointer-events'
