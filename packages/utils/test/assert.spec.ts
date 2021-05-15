@@ -19,9 +19,9 @@ import {
   isWeakMap,
   isPrimitive
 } from '@fardel/utils';
-
+// eslint-disable-next-line
 const args = (function(p1, p2, p3) {
-  // eslint-disable-next-line prefer-rest-params
+  // eslint-disable-next-line
   return arguments;
 })(1, 2, 3);
 
@@ -45,7 +45,6 @@ const testTypes = [
   { val: new Map(), type: 'map' },
   { val: new WeakMap(), type: 'weakmap' },
   { val: new Set(), type: 'set' },
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
   { val: BigInt(1), type: 'bigint' }
 ]
 
