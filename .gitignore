@@ -45,5 +45,7 @@ node_modules/
 .yarn/install-state.gz
 .pnp.*
 
-# webpack build
+# builds
 dist
+types
+packages/**/index.d.ts

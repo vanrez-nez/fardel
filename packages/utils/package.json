@@ -2,14 +2,10 @@
   "name": "@fardel/utils",
   "version": "0.1.1",
   "description": "Bundle of common utils",
-  "main": "dist/index.js",
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
   "scripts": {
-    "build": "yarn bundle:prod",
-    "bundle:prod": "webpack --mode production",
-    "bundle:dev": "webpack --mode development --devtool source-map",
-    "start": "webpack serve --mode development --open",
-    "test": "yarn bundle:dev && mocha \"dist/test/**/*.spec.js\"",
-    "prepack": "yarn build"
+    "build": "cross-env NODE_ENV=production rollup -c rollup.config.js"
   },
   "publishConfig": {
     "access": "public"
@@ -21,5 +17,6 @@
     "!dist/tsconfig.tsbuildinfo"
   ],
   "author": "Ivan Juarez",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {}
 }

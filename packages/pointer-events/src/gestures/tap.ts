@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { PointerEventsGesture } from "./gesture";
 import * as POINTER from '../const';
 

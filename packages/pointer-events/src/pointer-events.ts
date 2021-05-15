@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { uniqArray, eventCompose, EventComposeHandler, EventComposeEntry, EventEmitter } from '@fardel/utils'
 import type { PointerEventsGesture, PointerEventType } from './gestures/gesture';
 import * as POINTER from './const';

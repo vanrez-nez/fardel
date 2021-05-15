@@ -3,32 +3,33 @@
   "workspaces": [
     "packages/*"
   ],
+  "private": true,
   "scripts": {
     "clean": "rimraf ./packages/*/dist",
-    "build": "tsc --build",
-    "start:pointer-events": "yarn workspace @fardel/pointer-events start",
-    "start:utils": "yarn workspace @fardel/utils start",
-    "test:utils": "yarn workspace @fardel/utils test"
+    "lint": "eslint --ext ts packages --ignore-path .gitignore",
+    "build": "yarn workspaces run build",
+    "clean:types": "rimraf ./types",
+    "build:types": "yarn clean:types && tsc && node ./build/types-bundler.js && yarn clean:types"
   },
-  "private": true,
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.15.1",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-typescript": "^8.2.1",
     "@types/chai": "^4.2.16",
     "@types/mocha": "^8.2.2",
     "@types/sinon": "^10.0.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
     "@typescript-eslint/parser": "^4.22.0",
     "chai": "^4.3.4",
+    "cross-env": "^7.0.3",
     "eslint": "^7.24.0",
     "lerna": "^4.0.0",
     "mocha": "^8.3.2",
     "rimraf": "^3.0.2",
+    "rollup": "^2.47.0",
     "sinon": "^10.0.0",
-    "source-map-loader": "^2.0.1",
-    "ts-loader": "^8.1.0",
-    "typescript": "^4.2.4",
-    "webpack": "^5.33.2",
-    "webpack-cli": "4.6.0",
-    "webpack-dev-server": "^3.11.2"
+    "typescript": "^4.2.4"
   },
   "license": "MIT",
   "version": "0.0.1"
