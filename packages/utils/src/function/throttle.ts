@@ -1,5 +1,6 @@
 import { debounce } from './debounce'
 
+// eslint-disable-next-line
 type Func = (...args: any[]) => any;
 
 export type ThrottleOptions = {

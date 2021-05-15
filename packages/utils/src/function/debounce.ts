@@ -1,5 +1,6 @@
 import { isFunction } from '../assert'
 
+// eslint-disable-next-line
 type Func = (...args: any[]) => any;
 
 export type DebounceOptions = {

@@ -10,10 +10,12 @@ export interface PointerEventsGestureOptions {
 }
 
 type GenericEvents = {
+  // eslint-disable-next-line
   [key: string]: (...args: any[]) => void;
 }
 
 type TypedEvents<K> = {
+  // eslint-disable-next-line
   [Property in keyof K]: (...args: any[]) => void;
 }
 
