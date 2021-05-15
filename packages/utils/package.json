@@ -1,6 +1,6 @@
 {
   "name": "@fardel/utils",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Bundle of common utils",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -17,6 +17,5 @@
     "!dist/tsconfig.tsbuildinfo"
   ],
   "author": "Ivan Juarez",
-  "license": "MIT",
-  "devDependencies": {}
+  "license": "MIT"
 }

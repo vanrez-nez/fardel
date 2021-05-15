@@ -3,6 +3,29 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [0.2.0](https://github.com/vanrez-nez/fardel/compare/@fardel/utils@0.1.1...@fardel/utils@0.2.0) (2021-05-15)
+
+
+### Bug Fixes
+
+* eslint config ([1b8ce1f](https://github.com/vanrez-nez/fardel/commit/1b8ce1fd7bd67604b8289e71d95fdc1f2270c616))
+* freezing handlers object ([6d72f0d](https://github.com/vanrez-nez/fardel/commit/6d72f0d9b5bcbba166f9dbd1f2d550833523d0b3))
+* lint unused imports ([638d1d6](https://github.com/vanrez-nez/fardel/commit/638d1d638bcf0bb49fc44bd7cd27efd9f2c0415a))
+
+
+### Features
+
+* event emitter ([e24564c](https://github.com/vanrez-nez/fardel/commit/e24564c96b5102dc872b50ceb0be9460262e63af))
+* ignoring any args on callbacks ([6034faf](https://github.com/vanrez-nez/fardel/commit/6034faf6f4f937dabe959c53272f361b20e7f43c))
+* support to off all listeners ([32e8a12](https://github.com/vanrez-nez/fardel/commit/32e8a127204131cd752887b4353a777f0c46daff))
+* switching to rollup builds ([175d635](https://github.com/vanrez-nez/fardel/commit/175d63596c66487d59c755638623bda77eefd7a0))
+* uniqArray util ([9a857aa](https://github.com/vanrez-nez/fardel/commit/9a857aa2501c76c48ba041739ff716c4fbb3b0d2))
+* utils for to handle event bindings ([dd10fd3](https://github.com/vanrez-nez/fardel/commit/dd10fd30e339ffb11e1b91ba661ff458873aa7b7))
+
+
+
+
+
 ## [0.1.1](https://github.com/vanrez-nez/fardel/compare/@fardel/utils@0.1.0...@fardel/utils@0.1.1) (2021-05-06)
 
 
